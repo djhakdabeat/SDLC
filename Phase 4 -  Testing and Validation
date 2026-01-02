@@ -1,0 +1,29 @@
+Phase 4 -  Testing and Validation
+
+Security Activities
+• Dynamic security testing
+• Penetration testing (could opt in for continuous testing with Third party)
+• Security acceptance testing
+• Vulnerability assessment
+• API security testing
+
+Tools & Technologies
+• DAST: Burp Suite, OWASP ZAP, Acunetix
+• Penetration testing: Metasploit, Kali Linux tools
+• API testing: Postman, SoapUI with security tests
+• Fuzz testing: AFL, Peach Fuzzer
+• Container scanning: Trivy, Clair, Anchore
+
+Methodologies & Standards
+• OWASP Testing Guide
+• PTES (Penetration Testing Execution Standard)
+• OWASP Top 10 validation
+• API security testing (OWASP API Top 10)
+• Red team exercises
+
+Key Deliverables
+• Penetration test report
+• Vulnerability assessment results
+• Remediation plan
+• Security test cases passed
+• Risk acceptance documentation
