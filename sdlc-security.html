@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure SDLC Integration Diagram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .phase-card {
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover {
+            transform: translateY(-2px);
+        }
+        .connection-line {
+            position: absolute;
+            left: 1.5rem;
+            top: 4rem;
+            width: 2px;
+            height: 2rem;
+            background-color: #d1d5db;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="w-full max-w-6xl mx-auto p-6">
+        <!-- Header -->
+        <div class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                Secure SDLC Integration
+            </h1>
+            <p class="text-gray-600">
+                Security activities, tools, and methodologies at each phase
+            </p>
+        </div>
+
+        <!-- Phases Container -->
+        <div id="phases-container" class="space-y-4"></div>
+
+        <!-- Key Concepts Footer -->
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Key Security Integration Concepts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h4 class="font-bold text-blue-800 mb-2">Shift-Left Security</h4>
+                    <p class="text-sm text-gray-700">
+                        Integrate security early in the SDLC to catch vulnerabilities when they're cheaper and easier to fix
+                    </p>
+                </div>
+                <div class="p-4 bg-green-50 rounded-lg">
+                    <h4 class="font-bold text-green-800 mb-2">DevSecOps</h4>
+                    <p class="text-sm text-gray-700">
+                        Automate security testing and integrate it into CI/CD pipelines for continuous security validation
+                    </p>
+                </div>
+                <div class="p-4 bg-purple-50 rounded-lg">
+                    <h4 class="font-bold text-purple-800 mb-2">Defense in Depth</h4>
+                    <p class="text-sm text-gray-700">
+                        Layer multiple security controls across all SDLC phases to create redundant protection
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const phases = [
+            {
+                id: 1,
+                name: "Planning & Requirements",
+                icon: "🛡️",
+                color: "bg-blue-500",
+                activities: [
+                    "Security requirements gathering",
+                    "Threat modeling initiation",
+                    "Data classification",
+                    "Compliance requirements identification",
+                    "Risk assessment"
+                ],
+                tools: [
+                    "Microsoft Threat Modeling Tool",
+                    "OWASP Threat Dragon",
+                    "Confluence/Jira for requirements",
+                    "Risk registers"
+                ],
+                methodologies: [
+                    "STRIDE threat modeling",
+                    "PASTA (Process for Attack Simulation)",
+                    "Security user stories",
+                    "Abuse case development"
+                ],
+                deliverables: [
+                    "Security requirements document",
+                    "Initial threat model",
+                    "Data classification matrix",
+                    "Compliance checklist"
+                ]
+            },
+            {
+                id: 2,
+                name: "Design & Architecture",
+                icon: "📐",
+                color: "bg-purple-500",
+                activities: [
+                    "Security architecture review",
+                    "Threat model refinement",
+                    "Security design patterns",
+                    "Authentication/authorization design",
+                    "Data flow diagram creation"
+                ],
+                tools: [
+                    "Lucidchart / Draw.io for diagrams",
+                    "Architecture review templates",
+                    "OWASP ASVS (Application Security Verification Standard)",
+                    "Cloud security posture tools (Prisma, CloudGuard)"
+                ],
+                methodologies: [
+                    "Zero Trust Architecture principles",
+                    "Defense in depth",
+                    "Least privilege design",
+                    "Secure by design principles",
+                    "Privacy by design"
+                ],
+                deliverables: [
+                    "Security architecture document",
+                    "Data flow diagrams",
+                    "Network diagrams with security zones",
+                    "Authentication flow diagrams",
+                    "Security sign-off on design"
+                ]
+            },
+            {
+                id: 3,
+                name: "Development & Implementation",
+                icon: "💻",
+                color: "bg-green-500",
+                activities: [
+                    "Secure coding practices",
+                    "Static code analysis",
+                    "Dependency scanning",
+                    "Secret management",
+                    "Code review with security focus"
+                ],
+                tools: [
+                    "SAST: SonarQube, Checkmarx, Veracode, Fortify",
+                    "SCA: Snyk, WhiteSource, Black Duck",
+                    "Secret scanning: GitGuardian, TruffleHog",
+                    "IDE plugins: SonarLint, Snyk plugin",
+                    "Git hooks for pre-commit checks"
+                ],
+                methodologies: [
+                    "OWASP Secure Coding Practices",
+                    "Peer code review with security checklist",
+                    "Shift-left security",
+                    "DevSecOps practices",
+                    "Secure SDLC training"
+                ],
+                deliverables: [
+                    "Clean SAST scan results",
+                    "Dependency vulnerability report",
+                    "Code review sign-offs",
+                    "Security unit tests"
+                ]
+            },
+            {
+                id: 4,
+                name: "Testing & Validation",
+                icon: "🧪",
+                color: "bg-yellow-500",
+                activities: [
+                    "Dynamic security testing",
+                    "Penetration testing",
+                    "Security acceptance testing",
+                    "Vulnerability assessment",
+                    "API security testing"
+                ],
+                tools: [
+                    "DAST: Burp Suite, OWASP ZAP, Acunetix",
+                    "Penetration testing: Metasploit, Kali Linux tools",
+                    "API testing: Postman, SoapUI with security tests",
+                    "Fuzz testing: AFL, Peach Fuzzer",
+                    "Container scanning: Trivy, Clair, Anchore"
+                ],
+                methodologies: [
+                    "OWASP Testing Guide",
+                    "PTES (Penetration Testing Execution Standard)",
+                    "OWASP Top 10 validation",
+                    "API security testing (OWASP API Top 10)",
+                    "Red team exercises"
+                ],
+                deliverables: [
+                    "Penetration test report",
+                    "Vulnerability assessment results",
+                    "Remediation plan",
+                    "Security test cases passed",
+                    "Risk acceptance documentation"
+                ]
+            },
+            {
+                id: 5,
+                name: "Deployment & Release",
+                icon: "🚀",
+                color: "bg-orange-500",
+                activities: [
+                    "Infrastructure security validation",
+                    "Configuration review",
+                    "Security baseline verification",
+                    "Change management approval",
+                    "Pre-production security checks"
+                ],
+                tools: [
+                    "IaC scanning: Checkov, Terrascan, tfsec",
+                    "Container security: Prisma Cloud, Aqua Security",
+                    "Configuration management: Ansible, Chef, Puppet",
+                    "CI/CD security: Jenkins with security plugins, GitLab CI",
+                    "Cloud security: AWS Security Hub, Azure Security Center"
+                ],
+                methodologies: [
+                    "Infrastructure as Code security",
+                    "Immutable infrastructure",
+                    "Blue-green deployment",
+                    "Canary releases with monitoring",
+                    "Security hardening baselines (CIS benchmarks)"
+                ],
+                deliverables: [
+                    "Deployment security checklist completed",
+                    "Infrastructure scan results",
+                    "Security configuration validation",
+                    "Change approval with security sign-off",
+                    "Rollback plan"
+                ]
+            },
+            {
+                id: 6,
+                name: "Operations & Monitoring",
+                icon: "🔧",
+                color: "bg-red-500",
+                activities: [
+                    "Security monitoring",
+                    "Incident response",
+                    "Vulnerability management",
+                    "Patch management",
+                    "Security metrics and reporting"
+                ],
+                tools: [
+                    "SIEM: Splunk, IBM QRadar, Azure Sentinel",
+                    "EDR: CrowdStrike, Carbon Black, SentinelOne",
+                    "Vulnerability scanners: Qualys, Tenable Nessus",
+                    "WAF: CloudFlare, AWS WAF, F5",
+                    "SOAR: Palo Alto Cortex XSOAR, Splunk SOAR"
+                ],
+                methodologies: [
+                    "Continuous security monitoring",
+                    "NIST Cybersecurity Framework",
+                    "Incident response playbooks",
+                    "Mean Time to Detect/Respond (MTTD/MTTR)",
+                    "Security KPI/KRI tracking"
+                ],
+                deliverables: [
+                    "Security dashboards",
+                    "Incident reports",
+                    "Vulnerability management reports",
+                    "Patch compliance reports",
+                    "Security posture assessments"
+                ]
+            }
+        ];
+
+        function createListItems(items, color) {
+            return items.map(item => `
+                <li class="flex items-start gap-2 text-gray-700">
+                    <span class="text-${color}-500 mt-1">•</span>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+        }
+
+        function createPhaseCard(phase, index) {
+            const hasNextPhase = index < phases.length - 1;
+            
+            return `
+                <div class="relative">
+                    ${hasNextPhase ? '<div class="connection-line"></div>' : ''}
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative z-10 phase-card">
+                        <!-- Phase Header -->
+                        <div class="${phase.color} text-white p-4 cursor-pointer flex items-center justify-between hover:opacity-90 transition-opacity"
+                             onclick="togglePhase(${phase.id})">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-white bg-opacity-20 p-2 rounded text-2xl">
+                                    ${phase.icon}
+                                </div>
+                                <div>
+                                    <h2 class="text-xl font-bold">Phase ${phase.id}</h2>
+                                    <h3 class="text-lg">${phase.name}</h3>
+                                </div>
+                            </div>
+                            <span id="chevron-${phase.id}" class="text-2xl">▼</span>
+                        </div>
+
+                        <!-- Expanded Content -->
+                        <div id="content-${phase.id}" class="hidden p-6 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Security Activities -->
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                        🛡️ Security Activities
+                                    </h4>
+                                    <ul class="space-y-2">
+                                        ${createListItems(phase.activities, 'blue')}
+                                    </ul>
+                                </div>
+
+                                <!-- Tools & Technologies -->
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                        🔧 Tools & Technologies
+                                    </h4>
+                                    <ul class="space-y-2">
+                                        ${createListItems(phase.tools, 'green')}
+                                    </ul>
+                                </div>
+
+                                <!-- Methodologies -->
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                        💻 Methodologies & Standards
+                                    </h4>
+                                    <ul class="space-y-2">
+                                        ${createListItems(phase.methodologies, 'purple')}
+                                    </ul>
+                                </div>
+
+                                <!-- Key Deliverables -->
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                        ⚠️ Key Deliverables
+                                    </h4>
+                                    <ul class="space-y-2">
+                                        ${createListItems(phase.deliverables, 'orange')}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function togglePhase(phaseId) {
+            const content = document.getElementById(`content-${phaseId}`);
+            const chevron = document.getElementById(`chevron-${phaseId}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                chevron.textContent = '▲';
+            } else {
+                content.classList.add('hidden');
+                chevron.textContent = '▼';
+            }
+        }
+
+        // Render all phases
+        const container = document.getElementById('phases-container');
+        container.innerHTML = phases.map((phase, index) => createPhaseCard(phase, index)).join('');
+    </script>
+</body>
+</html>
