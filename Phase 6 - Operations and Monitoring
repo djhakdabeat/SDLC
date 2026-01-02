@@ -1,0 +1,30 @@
+Phase 6 - Operations and Monitoring
+-----------------------------------
+
+Security Activities
+• Security monitoring
+• Incident response
+• Vulnerability management
+• Patch management
+• Security metrics and reporting
+
+Tools & Technologies
+• SIEM: Splunk, IBM QRadar, Azure Sentinel
+• EDR: CrowdStrike, Carbon Black, SentinelOne
+• Vulnerability scanners: Qualys, Tenable Nessus
+• WAF: CloudFlare, AWS WAF, F5
+• SOAR: Palo Alto Cortex XSOAR, Splunk SOAR
+
+Methodologies & Standards
+• Continuous security monitoring
+• NIST Cybersecurity Framework
+• Incident response playbooks
+• Mean Time to Detect/Respond (MTTD/MTTR)
+• Security KPI/KRI tracking
+
+Key Deliverables
+• Security dashboards
+• Incident reports
+• Vulnerability management reports
+• Patch compliance reports
+• Security posture assessments
