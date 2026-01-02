@@ -1,0 +1,29 @@
+Phase 3 - Development and Implementation
+----------------------------------------
+
+Security Activities
+• Secure coding practices
+• Static code analysis
+• Dependency scanning
+• Secret management
+• Code review with security focus
+
+Tools & Technologies
+• SAST: SonarQube, Checkmarx, Veracode, Fortify
+• SCA: Snyk, WhiteSource, Black Duck
+• Secret scanning: GitGuardian, TruffleHog
+• IDE plugins: SonarLint, Snyk plugin
+• Git hooks for pre-commit checks
+
+Methodologies & Standards
+• OWASP Secure Coding Practices
+• Peer code review with security checklist
+• Shift-left security
+• DevSecOps practices
+• Secure SDLC training
+
+Key Deliverables
+• Clean SAST scan results
+• Dependency vulnerability report
+• Code review sign-offs
+• Security unit tests
