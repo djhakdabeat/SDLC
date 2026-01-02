@@ -1,0 +1,29 @@
+Phase 2 - Design and Architecture
+---------------------------------
+
+Security Activities
+• Security architecture review
+• Threat model refinement
+• Security design patterns
+• Authentication/authorization design
+• Data flow diagram creation
+
+Tools & Technologies
+• Lucidchart / Draw.io for diagrams
+• Architecture review templates
+• OWASP ASVS (Application Security Verification Standard)
+• Cloud security posture tools (Prisma, CloudGuard)
+
+Methodologies & Standards
+• Zero Trust Architecture principles
+• Defense in depth
+• Least privilege design
+• Secure by design principles
+• Privacy by design
+
+Key Deliverables
+• Security architecture document
+• Data flow diagrams
+• Network diagrams with security zones
+• Authentication flow diagrams
+• Security sign-off on design
