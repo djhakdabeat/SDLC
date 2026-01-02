@@ -1,0 +1,29 @@
+Phase 5 - Deployment and Release
+
+Security Activities
+• Infrastructure security validation
+• Configuration review
+• Security baseline verification
+• Change management approval
+• Pre-production security checks
+
+Tools & Technologies
+• IaC scanning: Checkov, Terrascan, tfsec
+• Container security: Prisma Cloud, Aqua Security
+• Configuration management: Ansible, Chef, Puppet
+• CI/CD security: Jenkins with security plugins, GitLab CI
+• Cloud security: AWS Security Hub, Azure Security Center
+
+Methodologies & Standards
+• Infrastructure as Code security
+• Immutable infrastructure
+• Blue-green deployment
+• Canary releases with monitoring
+• Security hardening baselines (CIS benchmarks)
+
+Key Deliverables
+• Deployment security checklist completed
+• Infrastructure scan results
+• Security configuration validation
+• Change approval with security sign-off
+• Rollback plan
