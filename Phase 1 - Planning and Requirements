@@ -1,0 +1,27 @@
+Phase1 - Planning & Requirements
+---------------------------------
+
+Security Activities
+• Security requirements gathering
+• Threat modeling initiation
+• Data classification
+• Compliance requirements identification
+• Risk assessment
+
+Tools & Technologies
+• Microsoft Threat Modeling Tool
+• OWASP Threat Dragon
+• Confluence/Jira for requirements
+• Risk registers
+
+Methodologies & Standards
+• STRIDE threat modeling
+• PASTA (Process for Attack Simulation)
+• Security user stories
+• Abuse case development
+
+Key Deliverables
+• Security requirements document
+• Initial threat model
+• Data classification matrix
+• Compliance checklist
